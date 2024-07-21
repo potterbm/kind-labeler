@@ -1,0 +1,33 @@
+{
+  "labelValues": ["rude", "kind"],
+  "labelValueDefinitions": [
+    {
+      "identifier": "rude",
+      "severity": "alert",
+      "blurs": "content",
+      "defaultSetting": "warn",
+      "adultOnly": false,
+      "locales": [
+        {
+          "lang": "en",
+          "name": "Rude",
+          "description": "Intentionally rude or unkind behavior. This is an unprompted, knowing, intentional attempt to hurt someone’s feelings."
+        }
+      ]
+    },
+    {
+      "identifier": "kind",
+      "severity": "inform",
+      "blurs": "none",
+      "defaultSetting": "warn",
+      "adultOnly": false,
+      "locales": [
+        {
+          "lang": "en",
+          "name": "Kind",
+          "description": "This post or user makes an intentional attempt to be caring and kind, making the world a better place."
+        }
+      ]
+    }
+  ]
+}

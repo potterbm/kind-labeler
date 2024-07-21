@@ -8,6 +8,11 @@
 # 4. make start
 # 5. make status
 
+.PHONY: firewall-setup
+firewall-setup:
+	sudo ufw allow 80/tcp
+	sudo ufw allow 443/tcp
+
 .PHONY: file-setup
 file-setup:
 	sudo mkdir -pv /ozone/postgres
@@ -16,7 +21,7 @@ file-setup:
 	sudo cp Caddyfile /ozone/caddy/etc/caddy/Caddyfile
 	sudo cp postgres.env /ozone/postgres.env
 	sudo cp ozone.env /ozone/ozone.env
-	sudo cp ozone-compose.yaml /ozone/compose.yam
+	sudo cp ozone-compose.yaml /ozone/compose.yaml
 	sudo cp ozone.service /etc/systemd/system/ozone.service
 
 .PHONY: update-compose
