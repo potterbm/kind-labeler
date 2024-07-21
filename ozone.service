@@ -1,0 +1,15 @@
+[Unit]
+Description=Bluesky Ozone Service
+Documentation=https://github.com/bluesky-social/ozone
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/ozone
+ExecStart=/usr/bin/docker compose --file /ozone/compose.yaml up --detach
+ExecStop=/usr/bin/docker compose --file /ozone/compose.yaml down
+
+[Install]
+WantedBy=default.target

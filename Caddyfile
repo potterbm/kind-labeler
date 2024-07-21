@@ -1,0 +1,4 @@
+kind-labeler.bryan.town {
+  tls potterbm@gmail.com
+  reverse_proxy http://localhost:3000
+}
